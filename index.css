@@ -1,0 +1,161 @@
+body{
+    background-color: rgb(5, 5, 5);
+    font-family: Arial;
+}
+
+.top img{
+    height: 60px;
+    border-radius: 50%;
+    margin-top: -30px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    position: relative;
+}
+
+.top{
+    height: 40px;
+    text-align: center;
+    background-color: rgb(159, 125, 99);
+    border-radius: 10px 10px 0px 0px;
+    opacity: 0.8;
+}
+
+.information{
+    margin: 10px 11px 0px 11px;
+    text-align: center;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    font-size: 16.5px;
+}
+
+.info-part{
+    font-weight: bold;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.bottom{
+    position: absolute;
+    background-color: rgb(159, 125, 99);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    border-radius: 0 0 10px 10px;
+    opacity: 0.8;
+    transition: height 1s;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card:hover .bottom{
+    height: 50px;
+}
+
+.telephone img{
+    flex: 1;
+    object-fit: contain;
+    width: 75%;
+    height: 75%;
+    padding: 5px 0px 5px 20px;
+    
+}
+
+.card:hover .telephone{
+    animation: shakeTelephone 1s;
+}
+
+.email img{
+    flex: 1;
+    object-fit: contain;
+    width: 75%;
+    height: 75%;
+    padding: 5px 20px 5px 0px;
+}
+
+.card:hover .email{
+    animation: shakeEmail 1s;
+}
+
+.card{
+    width: 200px;
+    height: 300px;
+    background-color: rgb(52, 50, 50);
+    border-radius: 10px;
+    transform: rotate(10deg);
+    transition: transform  1s;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.moving-line{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    animation: borderAnimation 4s linear infinite;
+    transform: translateZ(-10px);
+    position: absolute;
+    border-radius: 5px;   
+}
+
+@keyframes borderAnimation {
+    0%{
+        top: -5px;
+        left: 0px;
+    }
+    25%{
+        top: -5px;
+        left: 155px;
+        background-color: blue;
+    }
+    50%{
+        top: 255px;
+        left: 155px;
+        background-color: lightgreen;
+    }
+    75%{
+        top: 255px;
+        left: -5px;
+        background-color: yellow;
+    }
+    100%{
+        top: -5px;
+        left: -5px;
+        background-color: purple;
+    }
+}
+
+@keyframes shakeTelephone {
+    33%{
+        transform: rotate(20deg);
+    }
+    66%{
+        transform: rotate(-40deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes shakeEmail {
+    33%{
+        transform: translateX(8px);
+    }
+    66%{
+        transform: translateX(-8px);
+    }
+    100%{
+        transform: translate(0px);
+    }
+}
