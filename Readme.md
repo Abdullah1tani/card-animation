@@ -11,7 +11,7 @@ https://github.com/Abdullah1tani/card-animation/assets/98557354/ed6fbc4e-9d1d-4c
 
 
 ## Other Projects
-Thank you for reading :D
+Thank you for reading
 
 Please check out my other personal projects:
 - [Cat animation](https://github.com/Abdullah1tani/cat-animation)
